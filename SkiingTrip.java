@@ -12,17 +12,56 @@ public SkiingTrip() {
     this.travelerName = "defaultClient";
     this.destination = "Northern Lights Village Saariselkä-Downhill Skiing and Aurora Après Ski";
     this.durationalInDays = 7;
-    this.isSaariselka = ture;
+    this.isSaariselka = t;
     this.totalCost = processFee *  durationalInDays; // calculation
 }
-public SkiingTrip(String name, String destination, int duration, boolean ture) {
-    this.travelerName = name; // set instance variable to client-provieded value 
-    this.destination = destination;
-    this.durationalInDays = duration;
-    this.isSaariselka = ture; 
-    this.totalCost = processFee * this.durationalInDays; // calculation 
-     
+public SkiingTrip(String n, String des, int dur, boolean t) {
+    this.travelerName = n; // set instance variable to client-provieded value 
+    this.destination = des;
+    this.durationalInDays = dur;
+    this.isSaariselka = t; 
+    this.totalCost = processFee * this.durationalInDays; // calculation     
 }
+
+    
+
+// Getters 
+public String getTravelerName(){
+    return travelername;
+}
+
+public String getDestination(){
+    return destination;
+}
+
+public int getDurationalInDays(){
+    return durationalInDays;
+}
+
+public double getTotalCost(){
+    return totalCost;
+}
+
+
+    // Setters 
+    public void setTravelerName( String NewTN){
+        this.travelername =  NewTN;
+    }
+
+    public void setDurationalInDays( int NewDuration){
+        this.durationalInDays = NewDuration;
+    }
+    // Special setter fir totalCost 
+    public void serTotalCost(){
+        this.totalCost = processFee * this.durationalInDays;
+
+
+    // toString 
+    public String toString() {
+         String state = "SkiingTrip[" + travelerName + "," + destination + "," + durationalInDays + "," + totalCost + "]";
+         return state; 
+    }
+
 
 
 
