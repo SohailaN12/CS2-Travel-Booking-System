@@ -1,10 +1,10 @@
 public class SkiingTrip {
 // 1. INSTANCE VARIABLES (data)
-private static in processFee = 100; // class variables 
+private static int processFee = 100; // class variables 
 private String travelerName; // provided by client  
 private String destination; // provided by client 
 private int durationalInDays; // provided by client 
-private boolean isSaariselka; // provided by client 
+private boolean isSkier; // provided by client 
 private double totalCost; // calculated the totalCost 
 
 // 2. CONSTRUCTORS (defualt + parameterized)
@@ -12,14 +12,14 @@ public SkiingTrip() {
     this.travelerName = "defaultClient";
     this.destination = "Northern Lights Village Saariselkä-Downhill Skiing and Aurora Après Ski";
     this.durationalInDays = 7;
-    this.isSaariselka = t;
+    this.isSkier = true;
     this.totalCost = processFee *  durationalInDays; // calculation
 }
 public SkiingTrip(String n, String des, int dur, boolean t) {
     this.travelerName = n; // set instance variable to client-provieded value 
     this.destination = des;
     this.durationalInDays = dur;
-    this.isSaariselka = t; 
+    this.isSkier = true; 
     this.totalCost = processFee * this.durationalInDays; // calculation     
 }
 
@@ -27,7 +27,7 @@ public SkiingTrip(String n, String des, int dur, boolean t) {
 
 // Getters 
 public String getTravelerName(){
-    return travelername;
+    return travelerName;
 }
 
 public String getDestination(){
@@ -45,16 +45,25 @@ public double getTotalCost(){
 
     // Setters 
     public void setTravelerName( String NewTN){
-        this.travelername =  NewTN;
+        this.travelerName =  NewTN;
     }
 
     public void setDurationalInDays( int NewDuration){
         this.durationalInDays = NewDuration;
     }
-    // Special setter fir totalCost 
-    public void serTotalCost(){
+    
+    public void setDestination( String NewDes){
+        this.destination = NewDes;
+    }
+    // Special setter for totalCost  
+    public void setTotalCost(){
         this.totalCost = processFee * this.durationalInDays;
+    }
 
+    public void setIsSkier ( boolean NewIS){
+        this.isSkier = NewIS;
+    }
+    
 
     // toString 
     public String toString() {
